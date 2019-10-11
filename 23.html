@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>23. FIFO (First In First Out) a.k.a Queue</title>
+    <style media="screen">
+      body{
+        text-align: center;
+        font-family: verdana;
+      }
+      input{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        text-align: center;
+      }
+      input:focus {
+        border: 3px solid #555;
+      }
+      button {
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>23. FIFO (First In First Out) a.k.a Queue</h1>
+    <input id="input" type="text" name="textbox" placeholder="Input">
+    <br>
+    <button type="buttonIn" name="button" onclick="add()">IN</button>
+    <button type="buttonOut" name="button" onclick="deletion()">OUT</button>
+    <h2></h2>
+    <script type="text/javascript">
+      let buttonIn = document.getElementById('buttonIn');
+      let buttonOut = document.getElementById('buttonOut');
+      var result = [];
+      function add(){
+        let input = document.getElementById('input').value;
+        result.unshift(input);
+        document.querySelector('h2').innerHTML = result;
+        console.log(result);
+      }
+      function deletion(){
+        result.pop();
+        document.querySelector('h2').innerHTML = result;
+        console.log(result);
+      }
+
+    </script>
+
+  </body>
+</html>

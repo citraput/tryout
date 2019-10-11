@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>16. Palindrome</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let str = prompt("Masukkan kata atau kalimat: ")
+      function palindrome(str){
+        let newStr = str.toLowerCase().split('').filter(x => x.match(/[a-z]/)).join('')
+        let strPalindrome = newStr.split('').reverse().join('');
+        return newStr == strPalindrome ? "Palindrome" : "Bukan Palindrome";
+      }
+      console.log(palindrome('Makan'));
+      console.log(palindrome('Malam'));
+      console.log(palindrome('Budi pergi ke sekolah'));
+      console.log(palindrome('Kasur ini rusak'));
+      console.log(palindrome('Ibu Ratna antar ubi'));
+      console.log(palindrome('Race Car'));
+      console.log(palindrome('Never odd or even'));
+      console.log(palindrome('A man, a plan, a canal. Panama.'));
+
+      alert(palindrome(str));
+    </script>
+
+  </body>
+</html>

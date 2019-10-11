@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>20. Data Type Detector</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      "use strict";
+      function dataType(x){
+        if(typeof(x) == 'number'){
+          if(x % 1 !== 0){
+            return "float";
+          }
+            return typeof(x);
+        } else if(typeof(x) == 'string'){
+          if(Boolean(x.match(/^0x[0-9a-f]+$/i))){
+            return "hexadecimal";
+          } else if(Boolean(x.match(/^0b[0-9a-f]+$/i))){
+            return "binary";
+          } else if(Boolean(x.match(/^0o[0-9a-f]+$/i))){
+            return "octadecimal";
+          }
+            return typeof(x);
+        } else{
+            return typeof(x);
+        }
+      }
+
+      console.log(dataType({"hello": "world"})) // object
+      console.log(dataType(39)); // integer
+      console.log(dataType(44.5)); // float
+      console.log(dataType({"negara": "Indonesia"}));// object
+      console.log(dataType({}));//object
+      console.log(dataType(["lobak", "timun", "cabai"]));//array
+      console.log(dataType('hello')); // string
+      console.log(dataType(`world`)); // string
+      console.log(dataType("392")); // string
+      console.log(dataType({})); // object
+      console.log(dataType([])); // array
+      console.log(dataType(["satu", "dua"])); // array
+      console.log(dataType(1)); // integer
+      console.log(dataType(1.25)); // float
+      console.log(dataType('0o42')); // octadecimal
+      console.log(dataType('0x1c')); // hexadecimal
+      console.log(dataType('0b11'));// binary
+
+    </script>
+
+  </body>
+</html>

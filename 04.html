@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>04. Kabisat</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let year = prompt("Masukkan Tahun: ");
+      let output;
+      if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)){
+        output = "Kabisat";
+      } else {
+        output = "Bukan Kabisat";
+      }
+      alert(output);
+    </script>
+
+  </body>
+</html>

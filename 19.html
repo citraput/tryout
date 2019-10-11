@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>19. Recursive Function</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let input = prompt("Masukkan Angka: ");
+      function recursiveFunc(input){
+        if(input == 1){
+          return 1;
+        } else {
+          return input + ', ' + recursiveFunc(input-1)
+        }
+      }
+      console.log(recursiveFunc(input))
+      alert(recursiveFunc(input))
+    </script>
+
+  </body>
+</html>

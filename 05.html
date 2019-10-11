@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>05. Film Rating</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      let input = prompt("Masukkan Usia: ");
+      let output;
+      if(input >= 21){
+        output = "DEWASA";
+      } else if(input >= 13){
+        output = "REMAJA";
+      } else if(input >= 9){
+        output = "BIMBINGAN ORANG TUA";
+      } else if(input < 9){
+        output = "SEMUA USIA";
+      }
+      alert(output);
+    </script>
+
+  </body>
+</html>

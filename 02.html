@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>02. Grade</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let input = prompt("Masukkan nilai: ");
+      let output;
+      if(input >= 90){
+        output = "A";
+      } else if(input >= 80 && input <= 89){
+        output = "B";
+      } else if(input >= 70 && input <= 79){
+        output = "C";
+      } else if(input >= 60 && input <= 69){
+        output = "D";
+      } else if(input <= 59){
+        output = "E";
+      }
+      alert('Nilai Anda: ' + output);
+    </script>
+
+  </body>
+</html>

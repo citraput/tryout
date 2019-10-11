@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>15. Penjumlahan</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function penjumlahan(){
+        let temp = [];
+        let loop = true;
+        while(loop){
+          var input = prompt("Masukkan Angka: ");
+          if(input == Number(input)){
+            temp.push(Number(input));
+          } else if(input == '='){
+            loop = false;
+            break;
+          } else if(input != Number(input)){
+            alert('Informasi yang Anda masukkan salah. Masukkan Angka.')
+          }
+        }
+        alert(temp.reduce((acc, curr) => acc + curr, 0));
+      }
+      penjumlahan();
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>22. Temperature Converter</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const celciusToKelvin = temperature => {
+        return temperature + 273.15;
+      }
+
+      const kelvinToCelius = temperature => {
+        return temperature - 273.15;
+      }
+
+      const fahrenheitToCelcius = temperature => {
+        return (temperature - 32) / 1.8;
+      }
+
+      const celciusToFahrenheit = temperature => {
+        return (temperature * 1.8) + 32;
+      }
+
+      const fahrenheitToKelvin = temperature => {
+        return Number((((temperature - 32) / 1.8) + 273.15).toFixed(3));
+      }
+
+      const kelvinToFahrenheit = temperature => {
+        return Number((((temperature - 273.15) * 1.8) + 32).toFixed(2));
+      }
+
+      console.log(celciusToKelvin(80)); //353.15
+      console.log(kelvinToCelius(298.15)); //25
+      console.log(fahrenheitToCelcius(36.5)); // 2.5
+      console.log(celciusToFahrenheit(22)); // 71.6
+      console.log(fahrenheitToKelvin(234)); //385.372
+      console.log(kelvinToFahrenheit(203)); //-94.27
+
+    </script>
+
+  </body>
+</html>
