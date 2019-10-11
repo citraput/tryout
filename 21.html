@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>21. Number Bases Converter</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const numConvert = (value, from, to) => {
+        let result;
+        if(from == 'dec'){
+          switch(to){
+            case 'bin':
+              result = value.toString(2);
+              break;
+            case 'hex':
+              result = value.toString(16);
+              break;
+            case 'oct':
+              result = value.toString(8);
+              break;
+            default:
+              result = value;
+              break;
+          }
+        } else if(from == 'bin'){
+          switch(to){
+            case 'dec':
+              result = parseInt(value, 2);
+              break;
+            case 'hex':
+              result = parseInt(value, 2).toString(16).toUpperCase();;
+              break;
+            case 'oct':
+              result = parseInt(value, 2).toString(8).toUpperCase();
+              break;
+            default:
+              result = value;
+              break;
+          }
+        } else if(from == 'hex'){
+          switch(to){
+            case 'dec':
+              result = parseInt(value, 16);;
+              break;
+            case 'bin':
+              result = ("00000000" + (parseInt(value, 16)).toString(2)).substr(-8);
+              break;
+            case 'oct':
+              result = value.toString(16);
+              result = String(result);
+              result = parseInt(result, 8);
+              break;
+            default:
+              result = value;
+              break;
+          }
+        } else if(from == 'oct'){
+          switch(to){
+            case 'dec':
+              result = parseInt(value, 8);
+              break;
+            case 'hex':
+              result = value.toString(8);
+              result = parseInt(result, 16);
+              break;
+            case 'bin':
+              result = parseInt(value, 8);
+              result = result.toString(2);
+              break;
+            default:
+              result = value;
+              break;
+          }
+        }
+        return result == String(result) ? result.toUpperCase() : result;
+      }
+
+      console.log(numConvert(10, 'dec', 'bin'));// 1010
+      console.log(numConvert(10, 'dec', 'hex'));// A
+      console.log(numConvert(10, 'bin', 'hex'));// 2
+
+    </script>
+
+  </body>
+</html>
